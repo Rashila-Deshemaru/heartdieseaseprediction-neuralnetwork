@@ -1,0 +1,69 @@
+<html>
+  <head>
+    <title>Deploy Ml model</title>
+    {%load static%}
+
+
+  </head>
+
+  <body>
+    
+    <h2>Disease Check</h2>
+
+    <form action="predict" method="POST">
+      {% csrf_token %}
+
+        <legend>Personal Information</legend>
+
+        <span class="label-input100 text-center">Full Name :</span>
+        <input class="input100 text-center" type="text" name="name" placeholder="Enter full name" required>
+        <br/><br/>
+
+        <span class="label-input100 d-block text-center">Age:</span>        
+        <input type = "number" name = "ages">
+
+        <span class="label-input100 d-block text-center">Sex:</span>        
+        <input type="radio" name="sex" value="0"> Male
+        <input type="radio" name="sex" value="1"> Female
+
+
+        <legend>Medical Information</legend>
+
+        <span class="label-input100 d-block">CP:</span>        
+        <input type = "number" name = "cp">
+
+        <span class="label-input100 d-block" style="left: -120px">trestbps:</span>
+        <input type = "number" name = "trestbps">
+
+        <span class="label-input100 d-block" style="left: -130px">Chol :</span>
+        <input type = "number" name = "chol">
+
+        <span class="label-input100 d-block">Fbs :</span>
+        <input type = "number" name = "fbs">
+
+        <span class="label-input100 d-block" style="left: -150px">restecg :</span>
+        <input type = "number" name = "restecg">
+
+        <span class="label-input100 d-block" style="left: -150px">thalach :</span>
+        <input type = "number" name = "thalach">
+
+        <span class="label-input100 d-block" style="left: -150px">Exang :</span>
+        <input type = "number" name = "exang">
+
+        <span class="label-input100 d-block" style="left: -150px">Oldpeak :</span>
+        <input type = "number" step = ".01" name = "oldpeak">
+
+        <span class="label-input100 d-block" style="left: -150px">Slope :</span>
+        <input type = "number" name = "slope">
+
+        <span class="label-input100 d-block" style="left: -150px">Ca :</span>
+        <input type = "number" name = "ca">
+
+        <span class="label-input100 d-block" style="left: -150px">Thal :</span>
+        <input type = "number" name = "thal">
+        
+        <button>Submit</button>
+
+    </form>
+  </body>
+</html>

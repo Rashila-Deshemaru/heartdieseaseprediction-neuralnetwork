@@ -1,0 +1,58 @@
+{% load static %} 
+
+
+
+{% include 'header.html' %}
+
+
+
+<center><h2>Book an Appointment</h2></center>
+<br>
+    <form action = "appointment_result" method = "POST">
+        {% csrf_token%}
+
+        Name: <input type = "text" name = "your_name" placeholder = "Your name" required><br><br>
+        Phone: <input type = "text" name = "your_phone" placeholder = "Your phone number" required><br><br>
+        Address: <input type = "text" name = "your_address" placeholder = "Your address" required><br><br>
+        Email: <input type = "text" name = "your_email" placeholder = "Your email" required><br><br>
+        Day: <select name = "appointment_day">
+            <option> Sunday</option>
+            <option> Monday</option>
+            <option> Tuesday</option>
+            <option> Wednesday</option>
+            <option> Thursday</option>
+            <option> Friday</option>
+        </select><br><br>
+        Time: <select name="appointment_time">
+            <option>10 AM - 11AM</option>
+            <option>11 AM - 12 PM</option>
+            <option>12 PM - 1PM</option>
+            <option>1 PM - 2PM</option>
+            <option>2 PM - 3PM</option>
+            <option>3 PM - 4PM</option>
+        </select>
+        <br>
+        <br>
+        Doctor: <select name = "your_doctor">
+
+            <option>Dr.Ram Bahadur Thapa(Physician)</option>
+            <option>Dr. Nilam Pradhan(Skin Doctor)</option>
+            <option>Dr. Suresh Timalsina(Communicable Disease Expert)</option>
+            <option>Dr. Himal Gurung(Skin Doctor)</option>
+            <option>Dr. Suresh Neupane(Physician)</option>
+            <option>Dr. Tara Suwal(Hematologist)</option>
+            <option>Dr. Niroj Thapa(Dermatologist)</option>
+            <option>Dr. Binu Lama(OPD Doctor)</option>
+        </select><br><br>
+
+        Remarks: <input type = "textbox" name = "your_message" required><br><br>
+
+       <button> Submit</button>
+
+
+    </form>
+
+
+
+
+

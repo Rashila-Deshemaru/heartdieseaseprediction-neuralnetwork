@@ -1,0 +1,20 @@
+{% load static %}
+
+{% include 'header.html' %}
+
+{% for x in data %}
+    
+    <div class="card">
+    <div class="container">
+        <img src = "{{x.image.url}}" height = 500 width = 500><br></img><br>
+       <b><label name = "doctor_name">Name: {{x.name}}</label><b>
+        <p name = "doctor_gmail">Email: {{x.email}}</p>
+        <p>Hospital Name: {{x.hospital_name}}</p>
+        <p>Specialist: {{x.specialist}}</p>  
+
+    </div>
+  </div>
+
+
+
+  {% endfor%}

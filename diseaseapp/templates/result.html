@@ -1,0 +1,20 @@
+{% load static%}
+{% include 'header.html' %}
+
+    
+       <h4>According to our calculation we can predict that you might have :
+        <b> <br>{{Disease}}</b></h4>
+
+
+      {% if Disease == 'Heart Disease Found'%}
+          <h1> Hello  {{user.username}} you have a Heart Disease. So Please book an appointment for the check up.
+            <br/>Thank you</h1>
+<br/>
+            <a href = "appointment"><button>Book your appointment</button></a>
+
+      {% else %}<br>
+      <h1> Hello you have not a Heart Disease. But Still you can visit our clinic 
+        for the normal check up. <br/>Thank you</h1>      
+        {% endif%} 
+    <br>
+
